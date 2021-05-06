@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Fat Loss Duration Formula</title>
+	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+	</script>
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+	    body {
+	        font-family: 'Merriweather', sans-serif;
+	        font-size: 14px;
+	        width: 60vw;
+	        margin: 10vh auto;
+	    }
+	    h1 {
+	        font-family: 'Montserrat';
+	        color: #7bb;
+	    }
+	    p {
+	        margin-top: 5vh;
+	    }
+	    li {
+	        margin-top: 2vh;
+	    }
+	    .MathJax {
+	        color: #578;
+	    }
+	    .frac .MathJax {
+	        font-size: 26px !important;
+	    }
+	    .f-r .MathJax {
+	        font-size: 32px !important;
+	    }
+	    .row {
+	        display: flex;
+	        flex-direction:row;
+	        width: 36vw;
+	        margin-top: 5px;
+	    }
+	    @media screen and (max-width: 800px) {
+	        body {
+	            width: 90vw;
+	        }
+	        .row {
+	            width: 100%;
+	        }
+	        .row>div {
+	            font-size: 12px;
+	        }
+	        .row>div:nth-child(1) {
+	            width: 70%;
+	        }
+	        .row>div:nth-child(2) {
+	            width: 30%;
+	        }
+	    }
+	    .row>div {
+	        width: 50%;
+	        font-size: 14px;
+	    }
+	    .row button {
+	        font-family: 'Merriweather';
+	        width: 100%;
+	        padding: 16px;
+	        margin-top: 10px;
+	        margin-bottom: 10px;
+	        border-width: 0;
+	        border-radius: 3px;
+	        background-color: #4aa;
+	        color: #fff;
+	        cursor: pointer;
+	        outline:none;
+	    }
+	    .row button:hover {
+	        background-color: #4aab;
+	    }
+	    input[type=number] {
+	        border: 1px solid #ddd;
+	        border-radius: 3px;
+	        padding: 5px;
+	        width: 92%;
+	    }
+	    input[type=number]:focus {
+	        outline: none;
+	        border: 1px solid #399;
+	    }
+	</style>
+</head>
+
+<body>
+    <h1>A Calculator for Duration of Fat Loss</h1>
+    <p><h5><b>DISCLAIMER: THE INFORMATION ON THIS PAGE DOES NOT CONSTITUTE MEDICAL ADVICE AND AS SUCH, IS PRESENTED AS-IS, WITHOUT GUARANTEE OF ACCURACY.</b></h5></p>
+    <p style="text-align:justify">
+        I have been known to do a lot of thinking. And it just so happens that today, I was <i>thinking</i> about going on a fat loss journey to get into a more healthy shape. So naturally, instead of heading to the gym, I decided to engage in some mathematical calculations, and some coding, to figure out how long it would take me to get that coveted six-pack of abdominal muscles. I have realized (mostly by glancing through several fitness articles online) that in order to get to a menacingly ripped physique, I cannot just focus on the goal weight. Because weight loss occurs from both muscle and fat, and I need to figure out how realistically I can cut my fat, while preserving some or most of my muscles. So, a goal <i>body fat percentage</i> is what I am trying to achieve. Let&rsquo;s get into the math.
+    </p>
+	<p>
+		First, we identify some variables -
+		<li>My current (total) body weight: \(w_t\)</li>
+	<li>My current body fat percent: \(f_c\)</li>
+		<li>My current fat weight: \(w_f=\)\(f_c \over 100\)\(\times w_t\)</li>
+		<li>My current muscle weight: \(w_m = w_t - w_f\)</li>
+		<li>My goal body fat percent: \(f_g\)</li>
+    <li>The amount of weight I need to lose: \(l\) (<i>This is what we need to find out</i>)</li>
+    
+	</p>
+  <p>
+    Assuming I lose \(a\%\) from fat and the rest from muscle <br>
+    (and setting \(k=\)\(a \over 100\) for convenience)
+    <li>Fat lost: \(kl\)</li>
+    <li>Muscle lost: \((1-k)l\)
+  </p>
+  <p>
+    So, 
+    <li>My goal weight is \((w_t-l)\)</li>
+    <li>My goal fat weight is \((w_f-kl)\)
+  </p>
+  <p>
+    Therefore, we can say that
+    <div class="frac">
+      \(w_f-kl \over w_t-l\)\(=\)\(f_g \over 100\)
+    </div>
+  </p>
+  <p>
+    Solving for \(l\), and substituting values, we get 
+    <div class="frac">
+      \(l=\)
+      \((\)
+      \(f_c-f_g \over a-f_g\)
+      \()\)
+      \(\times w_t\)
+    </div>
+  </p>
+  <p>
+    if my weight loss per week is \(l_w\), and \(n\) is the number of weeks needed, we have \(l=l_w \times n\), and finally get 
+    <div class="f-r">
+      \(n=\)
+      \((\)
+      \(f_c-f_g \over a-f_g\)
+      \()\)
+      \(\times\)
+      \(w_t \over l_w\)
+    </div>
+  </p>
+  <div style="width:100%;margin:0 auto;height:2px;background:#2223"></div>
+  <p>
+      Now let&rsquo;s put this formula into action. (This will work for any unit of mass)
+      <br><br>
+      <div class="row">
+          <div>Current body weight (\(w_t\))</div>
+          <div>
+              <input type="number" id="w_t" tabindex="1">
+          </div>
+      </div>
+      <div class="row">
+          <div><a title="Estimate your body fat percentage" target="_blank" href="https://www.calculator.net/body-fat-calculator.html">Current body fat percent
+          </a> (\(f_c\))
+          </div>
+          <div>
+              <input type="number" id="f_c" tabindex="2">
+          </div>
+      </div>
+      <div class="row">
+          <div>Goal body fat percent (\(f_g\))</div>
+          <div>
+              <input type="number" id="f_g" tabindex="3">
+          </div>
+      </div>
+      <div class="row">
+          <div>Fat loss percent (\(a\))</div>
+          <div>
+              <input type="number" id="a" tabindex="4">
+          </div>
+      </div>
+      <div class="row">
+          <div>Weight lost per week (\(l_w\))</div>
+          <div>
+              <input type="number" id="l_w" tabindex="5">
+          </div>
+      </div>
+      <div class="row">
+          <button onclick="calculate()" tabindex="6">Calculate time taken for fat loss</button>
+      </div>
+  </p>
+  <p id="result" style="margin-top:-5px"></p>
+  <script>
+      function calculate() {
+          let w_t = document.getElementById("w_t").value;
+          let l_w = document.getElementById("l_w").value;
+          let f_c = document.getElementById("f_c").value;
+          let a = document.getElementById("a").value;
+          let f_g = document.getElementById("f_g").value;
+          
+          let n = Math.round((f_c-f_g)/(a-f_g)*w_t/l_w);
+          
+          document.getElementById("result").innerHTML = `It will take <b>${n}</b> weeks (${Math.round(n/4*100)/100} months) to get to <b>${w_t-l_w*n}</b> at <b>${f_g}%</b> body fat.`;
+      }
+  </script>
+</body>
+
+</html>
